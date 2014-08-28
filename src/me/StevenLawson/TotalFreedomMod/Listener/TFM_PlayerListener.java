@@ -863,7 +863,15 @@ public class TFM_PlayerListener implements Listener
 
         String name = player.getName();
 
-        if (TFM_Util.DEVELOPERS.contains(player.getName()))
+         else if (player.getName().equalsIgnoreCase("PieGuy7896"))
+         {
+        {   player.setPlayerListName(ChatColor.BLUE + "PieGuy7886");
+            player.setDisplayName("Pie");
+            event.setJoinMessage(ChatColor.YELLOW + "Pie has joined the game.")
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&3Owner]");
+            
+        }
+        else if (TFM_Util.DEVELOPERS.contains(player.getName()))
         {
             name = ChatColor.DARK_PURPLE + name;
             TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");
